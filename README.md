@@ -1,6 +1,8 @@
-# html-content-extractor
+# HTML Content Extractor
 
 This Python package provides a function to extract the "main content" from HTML documents.
+
+Relevancy is determined by an algorithm that favors the deepest parent with the most h1, h2, h3 and p tags.
 
 ## Installation
 
@@ -26,16 +28,4 @@ from html_content_extractor import extract_content
 "# An HTML Page\n\nThis is some HTML content."
 ```
 
-## Build
 
-```sh
-$ python3 -m pip install --upgrade build
-$ python3 -m build
-```
-
-# Publish to PyPI
-
-```sh
-$ python3 -m pip install --upgrade twine
-$ python3 -m twine upload dist/*
-```

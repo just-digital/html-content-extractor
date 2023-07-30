@@ -7,7 +7,7 @@ This Python package provides a function to extract the "main content" from HTML 
 You can install this package via pip:
 
 ```sh
-pip install html-content-extractor
+$ pip install html-content-extractor
 
 ```
 
@@ -24,4 +24,18 @@ from html_content_extractor import extract_content
 >>> markdown = extract_content(html, format='markdown')
 >>> print(content)
 "# An HTML Page\n\nThis is some HTML content."
+```
+
+## Build
+
+```sh
+$ python3 -m pip install --upgrade build
+$ python3 -m build
+```
+
+# Publish to PyPI
+
+```sh
+$ python3 -m pip install --upgrade twine
+$ python3 -m twine upload dist/*
 ```

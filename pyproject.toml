@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "html_content_extractor"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Kevin Sparks", email="pip@just-digital.net" },
 ]
@@ -12,9 +12,11 @@ description = "A Python package to extract the main content from HTML documents"
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
+    "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
+    "Topic :: Text Processing :: Markup :: HTML"
 ]
 license.file = "LICENSE"
 dependencies = [
@@ -22,8 +24,9 @@ dependencies = [
   "markdownify==0.11.6"
 ]
 
-
 [project.urls]
 "Homepage" = "https://github.com/just-digital/html-content-extractor"
 "Bug Tracker" = "https://github.com/just-digital/html-content-extractor/issues"
 
+[tool.setuptools.packages.find]
+exclude = ["docs*", "tests*"]

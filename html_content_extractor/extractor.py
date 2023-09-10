@@ -9,6 +9,8 @@ def __get_most_relevant_tag(soup):
         score = 0
         if node.name and node.name.lower() in ["h1", "h2", "h3", "p"]:
             score += 1 / depth
+        if node.attrs.get('role'):
+            print('hes')
         if node.children:
             for child in node.children:
                 if child.name is not None:
@@ -81,3 +83,8 @@ def extract_content(html: str, format="plaintext"):
             __get_well_presented_text(relevant_tag).get_text(),
         )
     return relevant_tag
+
+
+with open('test/html_examples/stripe-carbon-removal-article.html', 'r') as html:
+    tag = extract_content(html)
+    print(tag)

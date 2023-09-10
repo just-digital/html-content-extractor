@@ -163,3 +163,6 @@ cython_debug/
 #_cache/*
 
 .vscode/
+.aider*
+
+.conda_config
